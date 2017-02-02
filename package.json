@@ -1,0 +1,28 @@
+{
+  "name": "svg-spritzer",
+  "version": "0.0.1",
+  "description": "SVG spriting the way I want it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinkace/svg-spritzer.git"
+  },
+  "keywords": [
+    "svg",
+    "sprite"
+  ],
+  "author": "Kevin Cameron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinkace/svg-spritzer/issues"
+  },
+  "homepage": "https://github.com/kevinkace/svg-spritzer#readme",
+  "dependencies": {
+    "fs-promise": "^1.0.0",
+    "globule": "^1.1.0",
+    "svg-parser": "^1.0.5"
+  }
+}
