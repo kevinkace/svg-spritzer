@@ -32,7 +32,7 @@ So you can use them like this:
 </button>
 ```
 
-Make it like this:
+And you make it like this:
 
 ```js
 const svgSpritzer = require("svg-spritzer"),
