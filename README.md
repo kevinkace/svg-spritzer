@@ -5,7 +5,9 @@
 Sprite SVGs into a single sprite like this:
 
 ```html
-<svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg style="position: absolute; width: 0; height: 0;"
+width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
         <symbol id="icon1" viewBox="0 0 32 32">
             <title>icon1</title>
