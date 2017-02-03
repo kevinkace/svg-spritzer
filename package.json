@@ -4,7 +4,8 @@
   "description": "SVG spriting the way I want it.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "npm run lint && mocha",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
