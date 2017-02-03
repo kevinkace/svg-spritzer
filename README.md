@@ -2,7 +2,7 @@
 
 ![](https://media.giphy.com/media/3orif3jbFCSDlr9G3m/giphy.gif)
 
-Sprite SVGs into a single sprite like this:
+Sprite SVGs into a single SVG like this:
 
 ```html
 <svg style="position: absolute; width: 0; height: 0;"
