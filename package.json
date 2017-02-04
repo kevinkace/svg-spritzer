@@ -1,6 +1,6 @@
 {
   "name": "svg-spritzer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "SVG spriting the way I want it.",
   "main": "index.js",
   "scripts": {
