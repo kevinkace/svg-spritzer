@@ -11,12 +11,27 @@ const spritzer = require("../lib"),
 
 describe("/lib/index.js", () => {
     it("should process icons that match the expected file", () => {
-        Promise.all([
+        return Promise.all([
             spritzer(glob),
             fsp.readFile(expected, "utf8")
         ])
         .then((data) => {
             assert.equal(data[0], data[1]);
         });
+    });
+
+    it("should process icons and write the output to a file", () => {
+        const output = "./test/fixtures/output.svg";
+
+        return Promise.all([
+            spritzer(glob, { output }),
+            fsp.readFile(expected, "utf8")
+        ])
+        .then((data) =>
+            fsp.readFile(output, "utf8")
+                .then((file) => {
+                    assert.equal(data[1], file);
+                })
+        );
     });
 });
