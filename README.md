@@ -43,3 +43,14 @@ svgSpritzer(glob)
         // data is a string of sprited SVG
     });
 ```
+
+Or like this:
+
+```js
+svgSpritzer([
+    "./icons.svg",
+    "!output.svg"
+], {
+    output : "./output.svg"
+});
+```
