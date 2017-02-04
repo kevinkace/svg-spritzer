@@ -1,13 +1,12 @@
 # assets
 assets/
 
-# logs
+# dependencies
 node_modules/
-npm-debug.log
 
-# coverage directory and config
-coverage/
-.coveralls.yml
+# logs
+npm-debug.log
+debug.log
 
 # npm publish
 .publishrc
