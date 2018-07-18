@@ -24,13 +24,48 @@
   },
   "homepage": "https://github.com/kevinkace/svg-spritzer#readme",
   "dependencies": {
-    "fs-promise": "^1.0.0",
+    "eslint": "^5.1.0",
     "globule": "^1.1.0",
     "svg-parser": "^1.0.5"
   },
   "devDependencies": {
     "assert": "^1.4.1",
-    "mocha": "^3.2.0",
-    "publish-please": "^2.2.0"
+    "mocha": "^5.2.0",
+    "publish-please": "^3.2.0"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "rules": {
+      "eol-last": [
+        "error",
+        "always"
+      ],
+      "no-console": 0,
+      "radix": [
+        "warn",
+        "always"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "no-unused-vars": [
+        "warn",
+        {
+          "vars": "all",
+          "args": "after-used",
+          "ignoreRestSiblings": false
+        }
+      ]
+    }
   }
 }

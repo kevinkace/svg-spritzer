@@ -2,7 +2,10 @@
 
 const spritzer = require("../lib"),
 
-    fsp = require("fs-promise"),
+    util = require("util"),
+    fs   = require("fs"),
+
+    readFile  = util.promisify(fs.readFile),
 
     glob     = "./test/fixtures/input/*.svg",
     expected = "./test/fixtures/output/expected.svg",
@@ -13,11 +16,11 @@ describe("/lib/index.js", () => {
     it("should process icons that match the expected file", () => {
         return Promise.all([
             spritzer(glob),
-            fsp.readFile(expected, "utf8")
+            readFile(expected, "utf8")
         ])
-        .then((data) => {
-            assert.equal(data[0], data[1]);
-        });
+            .then((data) => {
+                assert.equal(data[0], data[1]);
+            });
     });
 
     it("should process icons and write the output to a file", () => {
@@ -25,13 +28,13 @@ describe("/lib/index.js", () => {
 
         return Promise.all([
             spritzer(glob, { output }),
-            fsp.readFile(expected, "utf8")
+            readFile(expected, "utf8")
         ])
-        .then((data) =>
-            fsp.readFile(output, "utf8")
-                .then((file) => {
-                    assert.equal(data[1], file);
-                })
-        );
+            .then((data) =>
+                readFile(output, "utf8")
+                    .then((file) => {
+                        assert.equal(data[1], file);
+                    })
+            );
     });
 });
