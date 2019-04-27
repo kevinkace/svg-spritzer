@@ -1,39 +1,41 @@
 "use strict";
 
-const spritzer = require("../lib"),
+const spritzer = require("../lib");
 
-    util = require("util"),
-    fs   = require("fs"),
+const { promisify }             = require("util");
+const { readFile : fsReadFile } = require("fs");
 
-    readFile  = util.promisify(fs.readFile),
+const readFile = promisify(fsReadFile);
 
-    glob     = "./test/fixtures/input/*.svg",
-    expected = "./test/fixtures/output/expected.svg",
+const normalizeNewline = require("normalize-newline");
 
-    assert = require("assert");
+const glob     = "./test/fixtures/input/*.svg";
+const expected = "./test/fixtures/output/expected.svg";
+
+const assert = require("assert");
 
 describe("/lib/index.js", () => {
-    it("should process icons that match the expected file", () => {
-        return Promise.all([
-            spritzer(glob),
-            readFile(expected, "utf8")
-        ])
-            .then((data) => {
-                assert.equal(data[0], data[1]);
-            });
-    });
+    it("should process icons that match the expected file", () =>
+        Promise.all([
+                spritzer(glob),
+                readFile(expected, "utf8")
+            ])
+            .then(data => {
+                assert.equal(normalizeNewline(data[0]), normalizeNewline(data[1]));
+            })
+    );
 
     it("should process icons and write the output to a file", () => {
         const output = "./test/fixtures/output.svg";
 
         return Promise.all([
-            spritzer(glob, { output }),
-            readFile(expected, "utf8")
-        ])
-            .then((data) =>
+                spritzer(glob, { output }),
+                readFile(expected, "utf8")
+            ])
+            .then(data =>
                 readFile(output, "utf8")
                     .then((file) => {
-                        assert.equal(data[1], file);
+                        assert.equal(normalizeNewline(data[1]), normalizeNewline(file));
                     })
             );
     });
