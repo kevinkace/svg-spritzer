@@ -24,14 +24,14 @@
   },
   "homepage": "https://github.com/kevinkace/svg-spritzer#readme",
   "dependencies": {
-    "globule": "^1.1.0",
+    "globule": "^1.2.1",
     "svg-parser": "^1.0.5"
   },
   "devDependencies": {
     "assert": "^1.4.1",
     "eslint": "^5.16.0",
-    "mocha": "^5.2.0",
-    "publish-please": "^3.2.0"
+    "mocha": "^6.1.4",
+    "publish-please": "^5.4.3"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
