@@ -28,7 +28,7 @@
     "svg-parser": "^2.0.2"
   },
   "devDependencies": {
-    "assert": "^1.4.1",
+    "assert": "^2.0.0",
     "eslint": "^6.6.0",
     "mocha": "^6.1.4",
     "normalize-newline": "^3.0.0",
