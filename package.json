@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "assert": "^2.0.0",
-    "eslint": "^6.6.0",
+    "eslint": "^7.7.0",
     "mocha": "^8.1.2",
     "normalize-newline": "^3.0.0",
     "publish-please": "^5.5.1"
