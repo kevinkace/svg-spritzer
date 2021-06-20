@@ -1,7 +1,7 @@
 {
   "name": "svg-spritzer",
   "version": "0.2.5",
-  "description": "SVG spriting the way I want it.",
+  "description": "SVG spriting",
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && mocha",
@@ -30,9 +30,9 @@
   "devDependencies": {
     "assert": "^2.0.0",
     "eslint": "^7.7.0",
+    "eslint-config-arenanet": "^5.2.2",
     "mocha": "^8.1.2",
-    "normalize-newline": "^4.1.0",
-    "publish-please": "^5.5.1"
+    "publish-please": "^5.5.2"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",

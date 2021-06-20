@@ -7,7 +7,7 @@ const { readFile : fsReadFile } = require("fs");
 
 const readFile = promisify(fsReadFile);
 
-const normalizeNewline = require("normalize-newline");
+// const normalizeNewline = require("normalize-newline");
 
 const glob     = "./test/fixtures/input/*.svg";
 const expected = "./test/fixtures/output/expected.svg";
@@ -21,7 +21,7 @@ describe("/lib/index.js", () => {
                 readFile(expected, "utf8")
             ])
             .then(data => {
-                assert.equal(normalizeNewline(data[0]), normalizeNewline(data[1]));
+                assert.equal(data[0], data[1]);
             })
     );
 
@@ -35,7 +35,7 @@ describe("/lib/index.js", () => {
             .then(data =>
                 readFile(output, "utf8")
                     .then((file) => {
-                        assert.equal(normalizeNewline(data[1]), normalizeNewline(file));
+                        assert.equal(data[1], file);
                     })
             );
     });

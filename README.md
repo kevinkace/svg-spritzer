@@ -1,7 +1,6 @@
 # svg-spritzer
 
-*Note:* I made this before finding out about [svgstore](https://github.com/svgstore/svgstore), (this is why you put a delimiter between identifyers!).
-It has more features, support, and likely a better future.
+*Note:* I made this before finding out about [svgstore](https://github.com/svgstore/svgstore), you probably want that instead.
 
 ![](https://media.giphy.com/media/3orif3jbFCSDlr9G3m/giphy.gif)
 
