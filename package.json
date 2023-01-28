@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint .",
-    "publish": "npx np"
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
