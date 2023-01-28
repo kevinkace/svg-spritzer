@@ -1,4 +1,5 @@
 # svg-spritzer
+![https://github.com/kevinkace/svg-spritzer/actions/workflows/npm-publish.yml/badge.svg]
 
 *Note:* I made this before finding out about [svgstore](https://github.com/svgstore/svgstore), you probably want that instead.
 
