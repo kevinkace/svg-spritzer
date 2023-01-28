@@ -34,40 +34,5 @@
     "mocha": "^9.0.1",
     "normalize-newline": "^4.1.0",
     "publish-please": "^5.5.2"
-  },
-  "eslintConfig": {
-    "extends": "eslint:recommended",
-    "env": {
-      "browser": true,
-      "es6": true,
-      "node": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module"
-    },
-    "rules": {
-      "eol-last": [
-        "error",
-        "always"
-      ],
-      "no-console": 0,
-      "radix": [
-        "warn",
-        "always"
-      ],
-      "semi": [
-        "error",
-        "always"
-      ],
-      "no-unused-vars": [
-        "warn",
-        {
-          "vars": "all",
-          "args": "after-used",
-          "ignoreRestSiblings": false
-        }
-      ]
-    }
   }
 }
