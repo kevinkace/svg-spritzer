@@ -22,6 +22,3 @@ test/
 #eslint
 .eslintrc
 .eslintignore
-
-# travis
-.travis.yml
