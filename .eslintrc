@@ -3,10 +3,17 @@
     "env": {
         "node": true
     },
-    "parserOptions":{
-        "sourceType": "module"
+    "parserOptions": {
+        "ecmaVersion": "latest"
     },
-    "rules": {
-        "align-assignments/align-assignments" : 0
-    }
+    "overrides": [
+        {
+            "files": [
+                "./test/**/*.*"
+            ],
+            "env": {
+                "jest": true
+            }
+        }
+    ]
 }
