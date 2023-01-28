@@ -1,5 +1,5 @@
 # svg-spritzer
-![build badge](https://github.com/kevinkace/svg-spritzer/actions/workflows/npm-publish.yml/badge.svg)
+[![build badge](https://github.com/kevinkace/svg-spritzer/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/kevinkace/posthtml-pseudo/actions/workflows/npm-publish.yml)
 
 *Note:* I made this before finding out about [svgstore](https://github.com/svgstore/svgstore), you probably want that instead.
 
